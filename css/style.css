@@ -1,0 +1,379 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box; /*for chrome and safari browser*/
+  -moz-box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+/* ul {
+  padding: 0;
+  margin: 0;
+} */
+
+/*======= Variable define =========*/
+:root {
+  --primary-color: #f5c332;
+  --secondary-color: #231e41;
+  --white-color: #fff;
+  --black-color: #1c1c1c;
+
+  /*text color variable */
+  --text-primary: #f5c332;
+  --text-secondary: #231e41;
+  --text-white: #fff;
+  --text-color: #555;
+  --text-gray: #999;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 100%;
+  font-weight: 400;
+}
+
+/* for Custom vertical scrollbars */
+::-webkit-scrollbar {
+  width: 0.425rem;
+}
+::-webkit-scrollbar-track {
+  background: var(--white-color);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+}
+/*End */
+
+h1 {
+  font-size: 3.125rem;
+  font-weight: 900;
+  margin-bottom: 3rem;
+  color: var(--text-secondary);
+  text-transform: capitalize;
+}
+
+h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--text-secondary);
+  text-transform: capitalize;
+}
+
+h4 {
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: var(--text-secondary);
+  text-transform: capitalize;
+  margin-bottom: 0.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: capitalize;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-color);
+  line-height: 1.75rem;
+}
+
+.main-btn {
+  padding: 0.625rem 1.875rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  border: 0.1875rem solid var(--primary-color);
+  background-color: var(--primary-color);
+  color: var(--black-color);
+
+  box-shadow: 0 0.125rem 0.625rem rgb(0 0 0 / 19%);
+  -webkit-transition: all 0.4s ease-out 0s;
+  transition: all 0.4s ease-out 0s;
+}
+
+.main-btn:hover {
+  background: transparent;
+  color: var(--text-primary);
+}
+
+.wrapper {
+  padding-top: 6.25rem;
+  padding-bottom: 6.25rem;
+}
+
+.text-content {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.counter-section h2,
+.testimonial-section h2,
+.book-food-text h2 {
+  color: var(--text-primary);
+}
+
+/*Navbar design  1*/
+.navigation-wrap.scroll-on {
+  position: fixed; /*when croll then its fixed*/
+  width: 100%;
+  background-color: var(--white-color);
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-brand img {
+  max-width: 45%;
+}
+
+.navigation-wrap .nav-item {
+  padding: 0 0.625rem;
+  transition: all 200ms linear;
+}
+/*for toogle icon */
+.navigation-wrap .navbar-toggler:focus {
+  border: unset;
+  outline: none;
+  box-shadow: none;
+}
+
+.navigation-wrap .nav-link {
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: var(--text-secondary);
+}
+
+.navigation-wrap .main-btn {
+  padding: 0.3125rem 1.4375rem;
+  box-shadow: none;
+  margin-left: 0.625rem;
+}
+
+/*** Banner Design 2 ****/
+.top-banner {
+  width: 100%;
+  background-image: url("../images/bg/bg-1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 14.875rem 0.9375rem;
+}
+
+.counter-section {
+    background-color: var(--black-color);
+    padding: 2.5rem 0;
+}
+
+counter-section p {
+    color:var(--text-white);
+    
+
+}
+
+/**About section design 3 **/
+.food-type {
+    padding-top:3.25rem;
+}
+
+.food-type ul li {
+    font-size: 1rem;
+    color:var(--text-color);
+    line-height: 2rem;
+    position: relative;
+    margin-left: 1.875rem;
+}
+
+.food-type ul li::before {    /*befor use coz text k phle show krna hai */
+    position: absolute;
+    left:-2.1875rem;
+    color:var(--text-primary);
+    font-size: 1.25rem;
+    display: inline-block;
+    font-weight: 900;
+    /*this is another method of use tick icon use from font awesome website*/
+    font-family: 'Font Awesome 5 Free';
+    content:"\f00c";   /*code wch is show on top */
+}
+
+/*Story section 4 */
+.story-section {
+    width:100%;
+    height:28.125rem;
+    background-image: url(../images/bg/bg-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;      /*so all data,button  comes in center*/
+    padding-top:6.25rem   /*data comes verically in center */
+}
+
+
+/*Explore -food 5 */
+.explore-food .card {
+    background: transparent;
+    border-radius: 0.9375rem 0.9375rem 0 0;
+    border:.125rem dashed var(--primary-color)
+
+}
+
+.explore-food .card img {
+    border-radius: 0.9375rem;
+    object-fit: cover;       /*image border k under Adjust ho overlap naa kare  */
+
+}
+
+.explore-food .card span {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color:var(--text-primary);
+    padding-bottom: 1rem;
+    border-bottom: 0.0625rem solid var(--primary-color);
+
+}
+
+.explore-food .card span del {
+    color:var(--text-gray);
+    margin-left: 0.5rem;
+}
+
+/** Testimonial Design  6**/
+.testimonial-section {
+    background-image: url("../images/bg/bg-4.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.testimonial-section .carousel-item {
+    margin-top: 3rem;
+    padding: 10rem 3.125rem;
+    background-color: var(--white-color);
+    border-radius: 0.9375rem;
+    text-align: center;
+}
+
+.testimonial-section .carousel-item img {
+    max-width: 6rem;
+    border-radius: 50%;
+    padding: 0.3125rem;
+    border:.125rem solid var(--primary-color);
+}
+
+
+.testimonial-section .carousel-item .carousel-caption p {
+    font-size: 1.3125rem;
+    line-height: 2.0625rem;
+    padding:0.625rem 11%;
+
+}
+
+.testimonial-section .carousel-indicators {
+    bottom: -4.9125em;
+}
+
+.testimonial-section .carousel-indicators button {
+    width:.9375rem;
+    height:.9375rem;
+    border-radius: 50%;
+}
+
+
+/***  Team Card   ***/
+.team .card {
+    background-color: var(--black-color);
+    border-radius: 0.625rem;
+    border:.25rem solid var(--primary-color);
+    text-align: center;
+}
+
+.team .card img {
+    border-radius: 0.625rem 0.625rem  0 0;
+}
+
+.team h4 {
+    color: var(--text-primary);
+    text-transform: uppercase;
+}
+
+.team h6, 
+.team p {
+    color:var(--text-white);
+}
+
+.team .social-icon i {
+    font-size: 1.125rem;
+    transition: .3s all ease;
+    margin:.3125rem;
+    background-color: var(--primary-color);
+    color:var(--text-white);
+    border-radius:50%;
+    width:2.1875rem;
+    height:2.1875rem;
+    line-height: 2.1875rem;
+}
+
+.team .social-icon i:hover {
+
+    background-color: var(--white-color);
+    color:var(--text-primary);
+}
+
+
+/**Book food design **/
+.book-food {
+    width:100%;
+    background: url("../images/bg/bg-3.jpg");
+    background-position: no-repeat;
+    background-size: cover;
+    padding:4.375rem 0;
+    /*for parallax effect */
+    background-attachment: fixed;
+    background-position: 0 4.495rem;
+}
+
+/** Download app **/
+.download-app {
+    width:100%;
+    background-image: url("../images/bg/bg-5.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/** footer **/
+.footer {
+    background: var(--black-color);
+
+}
+
+.footer .footer-link {
+    font-size: 1rem;
+    color:var(--text-white);
+    padding: 0 1.875rem;
+    
+}
+
+/** (for Icon) **/
+.footer a {
+    font-size: 1.5rem;
+    color:var(--text-white);
+    padding: 0 1rem;
+}
